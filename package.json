@@ -1,0 +1,23 @@
+{
+  "name": "api-rest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "prisma": "^4.15.0",
+    "sucrase": "^3.32.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.15.0",
+    "config": "^3.3.9",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2"
+  }
+}
