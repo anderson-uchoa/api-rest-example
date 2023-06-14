@@ -26,6 +26,7 @@ npm run dev
  |--controllers\    # Route controllers Controladores de rota (camada do controlador)
  |--middlewares\    # Express middlewares customizados
  |--api\            # Routes
+ |--doc\            # Documentação 
  |--services\       # Lógica de negócios (camada de serviço)
  |--utils\          # Classes e funções utilitárias
  |--validations\    # Solicitação de validação de dados

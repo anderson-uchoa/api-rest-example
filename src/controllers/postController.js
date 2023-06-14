@@ -26,7 +26,7 @@ async function createPost(req, res) {
             message: "Post created successfully",
         });
     } catch (error) {
-        return res.json({ message: error.message });
+        return res.status(500).json({ message: error.message });
     }
 }
 
@@ -41,7 +41,7 @@ async function findAllPosts(req, res) {
         });
 
     } catch (error) {
-        return res.json(error);
+        return res.status(500).json({ message: error.message });
     }
 }
 
@@ -68,7 +68,7 @@ async function updatePost(req, res) {
         });
 
     } catch (error) {
-        return res.json({ message: error.message });
+        return res.status(500).json({ message: error.message });
     }
 }
 
