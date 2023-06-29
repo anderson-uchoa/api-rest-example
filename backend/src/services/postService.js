@@ -36,9 +36,14 @@ async function updatePost(id, content) {
 
     return post;
 }
+async function deletePostById(id) {
 
+    return prisma.post.delete({where: {id: Number(id)}});
+}
 module.exports = {
     createPost,
     findAllPosts,
     updatePost,
+    findPostById,
+    deletePostById
 };

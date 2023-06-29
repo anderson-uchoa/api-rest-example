@@ -25,6 +25,7 @@ async function createPost(req, res) {
             data: post,
             message: "Post created successfully",
         });
+
     } catch (error) {
         return res.status(500).json({ message: error.message });
     }
@@ -73,8 +74,33 @@ async function updatePost(req, res) {
 }
 
 
+async function deletePost(req, res) {
+    try {
+        const { id } = req.params;
+
+        const post = await postService.findPostById(id);
+        if (!post){
+            return res.json({
+                success: false,
+                data: {},
+                message: "Could not find this user",
+            });
+        }
+
+        await postService.deletePostById(id);
+        return res.json({
+            success: true,
+            data: post,
+            message: "Post deleted successfully",
+        });
+    } catch (error) {
+        return res.json({ error });
+    }
+}
+
 module.exports = {
     createPost,
     findAllPosts,
     updatePost,
+    deletePost
 };
